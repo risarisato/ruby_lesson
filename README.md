@@ -1,24 +1,17 @@
-# README
+## README
+掲示板アプリを作りながら学ぶRuby_on_Rails入門
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## 環境構築
+- rubyのインストール
+- sqliteのインストール
+- rubyのbinファイルにsqliteを解凍して入れておく
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## コマンド確認
+- ruby -v
+- sqlite --version
+- gem -v
+- gem install bunndler
+- gem install rails
+- rails -v
+- rails new 新しいプロジェクト作成
+- rails server サーバ起動
