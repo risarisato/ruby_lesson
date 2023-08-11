@@ -13,5 +13,8 @@
 - gem install bunndler
 - gem install rails
 - rails -v
-- rails new 新しいプロジェクト作成
+- rails new XXXXX :新しいプロジェクト作成→フォルダごと作成される
 - rails server サーバ起動
+
+## コマンド2
+- rails generate controller XXXX ：手打ちでも可能だがコマンドでコントローラーを継承して作成できる
