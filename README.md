@@ -22,3 +22,6 @@
 - rails generate model Posts title:string content:text   Postsという名前のモデルを生成
 - rails db:migrate   マイグレーションファイルを実行してデータベースのスキーマ(テーブルやカラム)を変更する
 #### データベース内にpostsテーブルが作成され、その中にtitleとcontentカラムが追加される
+
+- git rebase test001
+- git rebase test002
