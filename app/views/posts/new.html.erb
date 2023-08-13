@@ -1,5 +1,15 @@
 <h1>新しい投稿フォーム</h1>
 
+<%# コメントアウト1行のコメントアウト　%>
+<!-- viewヘルパを使わない場合:開発者ツールで見える -->
 <form action="">
     <input type="text">
 </form>
+
+<%= form_with model: @posts do |form| %>
+<div><%= form.label :title %> <%= form.text_field :title %></div>
+<div><%= form.label :content %> <%= form.text_area :content %></div>
+<!-- <div><%= form.submit %>この場合はsaveと表示された</div> -->
+<!-- <div><%= form.submit %>ああああ</div>これはHTMLの書き方 -->
+<div><%= form.submit "投稿する" %></div>
+<% end %> 
