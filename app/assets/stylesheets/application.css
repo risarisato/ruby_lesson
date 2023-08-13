@@ -13,3 +13,114 @@
  *= require_tree .
  *= require_self
  */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: aqua;
+}
+
+small {
+    color: gray;
+}
+
+h1 {
+    color:rgb(0, 0, 0);
+    text-align: center;
+    padding: 20px 0;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 30%;
+    margin-top: 30px;
+}
+
+ul li {
+    background-color: darkgray;
+    border: 2px solid #3896f5;
+    padding: 20px;
+}
+
+ul li h2 {
+    margin: 0 0 10px 0;
+    color: azure;
+}
+
+ul li p {
+    color: aliceblue;
+    margin: 0;
+}
+
+.button-container {
+    text-align: center;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(217, 246, 217);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px opx 10px opx rgba(0, 0, 0, 0.15);
+    max-width: 500px;
+    margin: auto;
+    margin-top: 65px;
+}
+
+.form-input {
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+.form-input input,
+.form-input textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px soild #ddd;
+    border-radius: 10px;
+}
+
+.link-button {
+    display: inline-block;
+    background-color: rgb(66, 72, 253);
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.link-delete-button {
+    display: inline-block;
+    background-color: crimson;
+    font-size: 25px;
+    color: yellow;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    margin-left: 10px;
+    border: 2px solid;
+    cursor: pointer;
+}
+
+.edit-delet-wrapper {
+    display: flex;
+    margin-top: 10px;
+}
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
