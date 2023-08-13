@@ -1,5 +1,5 @@
 ## README
-掲示板アプリを作りながら学ぶRuby_on_Rails入門
+掲示板アプリを作りながら学ぶRuby_on_Rails入門<br>
 http://localhost:3000/posts/new :ローカル環境
 
 ## 環境構築
