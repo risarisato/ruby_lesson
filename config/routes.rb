@@ -9,5 +9,5 @@ Rails.application.routes.draw do
   # localhost:3000/postがindexの最初ページ
   # localhost:3000/post/newが次のページ
   # localhost:3000/post/new/createが次のページ
-  resources :posts, only:[:index, :new, :create]
+  resources :posts, only: [:index, :new, :create]
 end
