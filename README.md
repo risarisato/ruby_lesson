@@ -1,6 +1,8 @@
 ## README
 掲示板アプリを作りながら学ぶRuby_on_Rails入門<br>
 http://localhost:3000/posts/new :ローカル環境
+![image](https://github.com/risarisato/ruby_lesson/assets/88628553/944ff110-302f-4f77-bb13-3ba58f308b30)
+
 
 ## 環境構築
 - rubyのインストール
