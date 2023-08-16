@@ -30,29 +30,35 @@ h1 {
     padding: 20px 0;
 }
 
+h5 {
+    color:rgb(0, 0, 0);
+    text-align: center;
+    padding: 20px 0;
+}
+
 ul {
     list-style: none;
     padding: 0;
     margin: 0 30%;
     margin-top: 30px;
 }
-
+/* 投稿の色　*/
 ul li {
-    background-color: darkgray;
+    background-color: rgb(255, 255, 255);
     border: 2px solid #3896f5;
     padding: 20px;
 }
-
+/* 投稿のタイトル　*/
 ul li h2 {
     margin: 0 0 10px 0;
-    color: azure;
+    color: rgb(0, 0, 0);
 }
-
+/* 投稿の内容　*/
 ul li p {
-    color: aliceblue;
+    color: rgb(0, 0, 0);
     margin: 0;
 }
-
+/* 新規投稿ボタンを中央へ　*/
 .button-container {
     text-align: center;
 }
@@ -82,10 +88,10 @@ ul li p {
     border: 1px soild #ddd;
     border-radius: 10px;
 }
-
+/* 新規投稿ボタンの色　*/
 .link-button {
     display: inline-block;
-    background-color: rgb(66, 72, 253);
+    background-color: rgb(114, 117, 211);
     color: rgb(0, 0, 0);
     padding: 10px 20px;
     text-align: center;

@@ -1,3 +1,26 @@
-<h1>asdfasdfasdfas</h1>
+<h1>ruby_on_railsの練習</h1>
 
-<h2>これはrailsのview側の表示テストです</h2>
+<h5>
+これはrailsのview側の表示テストです<br>
+resources :posts, only: [:index, :new, :create]のpostになる
+</h5>
+
+<div class="button-container">
+    <%# link_toやpathはRailsの書き方　%>
+  <%= link_to "新しい投稿path→new移動", new_post_path, class: "link-button" %>
+</div>
+
+<ul>
+    <%# コントローラーのdef index @posts(複数)を展開する　%>
+    <%# <%= ここの＝イコールをすると値を返すためごちゃごちゃ表示する @posts.each do |post| %>
+  <% @posts.each do |post| %>
+  <li>
+    <h2><%= post.title %></h2>
+    <p><%= post.content %></p>
+    <span>
+        <%# DBの時間を表示させるcreated_at　%>
+        <small><%= post.created_at %></small>
+    </span>
+  </li> 
+  <% end %>
+</ul>
