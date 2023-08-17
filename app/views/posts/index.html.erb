@@ -22,6 +22,7 @@ resources :posts, only: [:index, :new, :create, :edit, :update, :destroy]のpost
         <small><%= post.created_at %></small>
     </span>
     <div class="edit-delete-wrapper">
+      <%= link_to "編集", edit_post_path(post), class: "link-edit" %>
       <%= button_to "削除", post_path(post), method: :delete, class: "link-delete-button" %>
     </div>
   </li>

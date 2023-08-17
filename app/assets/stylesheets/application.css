@@ -97,24 +97,40 @@ ul li p {
     color: rgb(0, 0, 0);
     padding: 10px 20px;
     text-align: center;
+    border-radius: 5px;
     cursor: pointer;
 }
-
-.link-delete-button {
+/* 編集ボタン　*/
+.link-edit {
     display: inline-block;
-    background-color: crimson;
-    font-size: 25px;
-    color: yellow;
+    background-color: rgb(20, 220, 117);
+    font-size: 15px;
+    color: rgb(255, 255, 255);
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
     text-align: center;
-    margin-left: 10px;
+    border: 2px solid;
+    cursor: pointer;
+}
+/* 削除ボタン */
+.link-delete-button {
+    display: inline-block;
+    background-color: crimson;
+    font-size: 15px;
+    color: rgb(255, 255, 255);
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    margin: 0px 0px 0px 20px;
     border: 2px solid;
     cursor: pointer;
 }
 
-.edit-delet-wrapper {
+/* .edit-delet-wrapper { */
+    /* スペルミスでcssが適用されずに横並びしなかった */
+.edit-delete-wrapper {
     display: flex;
     margin-top: 10px;
 }
