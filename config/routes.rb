@@ -9,5 +9,6 @@ Rails.application.routes.draw do
   # localhost:3000/postがindexの最初ページ
   # localhost:3000/post/newが次のページ
   # localhost:3000/post/new/createが次のページ
-  resources :posts, only: [:index, :new, :create]
+  #resources :posts, only: [:index, :new, :create] CRUD操作の生成と読み込み
+  resources :posts, only: [:index, :new, :create, :edit, :update, :destroy] #編集と削除のルーティンを追加
 end
