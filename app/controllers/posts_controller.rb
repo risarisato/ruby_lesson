@@ -1,5 +1,9 @@
 # PostsControllerは、ApplicationControllerを継承している
 class PostsController < ApplicationController
+
+    # リファクタリングで同じ記述を最初に宣言する[:edit, :update, :destroy]は適用される
+    before_action :set_post, only: [:edit, :update, :destroy]
+
     def index
         # DBからすべてを取得する
         # rubyのインスタンス変数「@」=「this」と同じ意味合い
@@ -28,12 +32,12 @@ class PostsController < ApplicationController
 
     # 編集する挙動、[:id]はどの投稿を編集するのか決める
     def edit
-        @post = Post.find(params[:id])
+        #@post = Post.find(params[:id])
     end
 
     # 編集したものを保存する→更新されれば、postへ、更新されなければeditへ
     def update
-        @post = Post.find(params[:id])
+        #@post = Post.find(params[:id])
         if @post.update(post_params)
             redirect_to posts_path
         else
@@ -43,7 +47,7 @@ class PostsController < ApplicationController
 
     # 投稿を削除する
     def destroy
-        @post = Post.find(params[:id])
+        #@post = Post.find(params[:id])
         @post.destroy
         redirect_to posts_path
     end
@@ -54,5 +58,10 @@ class PostsController < ApplicationController
         # postモデルのタイトルとコンテント情報を許可する
         #params.requier(:post).permit(:title, :content) スペルミス
         params.require(:post).permit(:title, :content)
+    end
+
+    # set_postを定義して、「before_action」で呼び出すと記述が楽になる
+    def set_post
+        @post = Post.find(params[:id])
     end
 end
