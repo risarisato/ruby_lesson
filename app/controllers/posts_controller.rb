@@ -16,7 +16,7 @@ class PostsController < ApplicationController
     # 新しい投稿する挙動
     def create # titleとcontentの入力情報(post_params)になる
         @post = Post.new(post_params)
-    
+
         # データベースに保存された場合は、postページに移動する
         #if @Post.save 大文字と小文字のミス
         if @post.save
@@ -26,7 +26,28 @@ class PostsController < ApplicationController
         end
     end
 
-    
+    # 編集する挙動、[:id]はどの投稿を編集するのか決める
+    def edit
+        @post = Post.find(params[:id])
+    end
+
+    # 編集したものを保存する→更新されれば、postへ、更新されなければeditへ
+    def update
+        @post = Post.find(params[:id])
+        if @post.update(post_params)
+            redirect_to posts_path
+        else
+            render :edit
+        end
+    end
+
+    # 投稿を削除する
+    def destroy
+        @post = Post.find(params[:id])
+        @post.destroy
+        redirect_to posts_path
+    end
+
     private # このprivateにするとposts_controllerでしか「post_params」呼び出せなくなる
     # 入力情報のpost_paramsを定義する
     def post_params

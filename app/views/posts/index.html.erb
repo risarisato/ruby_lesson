@@ -2,25 +2,28 @@
 
 <h5>
 これはrailsのview側の表示テストです<br>
-resources :posts, only: [:index, :new, :create]のpostになる
+resources :posts, only: [:index, :new, :create, :edit, :update, :destroy]のpostになる
 </h5>
 
 <div class="button-container">
-    <%# link_toやpathはRailsの書き方　%>
+    <%# link_toやpathはRailsの書き方 %>
   <%= link_to "新しい投稿path→new移動", new_post_path, class: "link-button" %>
 </div>
 
 <ul>
-    <%# コントローラーのdef index @posts(複数)を展開する　%>
+    <%# コントローラーのdef index @posts(複数)を展開する %>
     <%# <%= ここの＝イコールをすると値を返すためごちゃごちゃ表示する @posts.each do |post| %>
   <% @posts.each do |post| %>
   <li>
     <h2><%= post.title %></h2>
     <p><%= post.content %></p>
     <span>
-        <%# DBの時間を表示させるcreated_at　%>
+        <%# DBの時間を表示させるcreated_at %>
         <small><%= post.created_at %></small>
     </span>
-  </li> 
+    <div class="edit-delete-wrapper">
+      <%= button_to "削除", post_path(post), method: :delete, class: "link-delete-button" %>
+    </div>
+  </li>
   <% end %>
 </ul>

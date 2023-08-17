@@ -1,0 +1,23 @@
+<h1>投稿を編集する</h1>
+
+<%# コメントアウト1行のコメントアウト　%>
+<!-- viewヘルパを使わない場合:開発者ツールで見える -->
+
+<%# <form action=""> %>
+<%#     <input type="text"> %>
+<%# </form> %>
+
+
+<%= form_with model: @post, html: {class: "form-container"} do |form| %>
+<div class="form-input">
+  <%= form.label :title %> <%= form.text_field :title %>
+</div>
+<div class="form-input">
+  <%= form.label :content %> <%= form.text_area :content %>
+</div>
+<!-- <div><%= form.submit %>この場合はsaveと表示された</div> -->
+<!-- <div><%= form.submit %>ああああ</div>これはHTMLの書き方 -->
+<div class="button-container">
+  <%= form.submit "更新", class: "link-button" %>
+</div>
+<% end %>
