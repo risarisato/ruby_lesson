@@ -43,3 +43,8 @@ rb：# シャープが通常
 ## 知識
 - メソッド：Rubyのメソッド定義は、 def と end の間に、実行したい処理
 - ログファイルの確認: Railsはlog/development.logにある可能性がある
+#### 【CRUD操作のデータベース管理システム】
+- Create:生成(new,create)
+- Read:読み取り(index,show)
+- Update:更新(edit,update)
+- Delete:削除(destroy)
